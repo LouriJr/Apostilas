@@ -39,7 +39,7 @@ function ListaDeUsuarios() {
 export default ListaDeUsuarios;
 ```
 
-Vamos adicionar agora uma função chamada BuscarUsuarios, para poder realizar a requisição HTTP, é importante que essa função seja assincrona.
+Vamos adicionar agora uma função chamada BuscarUsuarios, para poder realizar a requisição HTTP, é importante que essa função seja assíncrona.
 
 ```JSX
 import React from "react";
@@ -108,7 +108,7 @@ Para relembrar, state em React é um objeto que representa o estado atual de um 
 
 O state é uma parte fundamental da arquitetura do React, permitindo que os componentes reajam a eventos, alterações de propriedades e interações do usuário. Ao atualizar o state de um componente, o React re-renderiza o componente e atualiza automaticamente a interface do usuário para refletir as mudanças.
 
-Podemos pensar no state como uma váriavel especial, onde o componente react reage (por isso o nome react 🤔) à essa variável.
+Podemos pensar no state como uma variável especial, onde o componente react reage (por isso o nome react 🤔) à essa variável.
 
 Para criar um state, vamos para o nosso JSX e utilizaremos o seguinte código:
 
@@ -243,7 +243,7 @@ Vamos adicionar o seguinte código ao nosso componente JSX:
   }, []);
 ```
 
-Não se esqueca de importar também o useEffect:
+Não se esqueça de importar também o useEffect:
 
 ```JS
 import { useEffect, useState } from "react";

@@ -52,25 +52,21 @@ Os arquivos devem ter a seguinte aparência:
 
 ![Alt text](./AssetsReact/image-5.png)
 
-Nossa estrutura de arquivos para o projeto React será bem simples, vamos centralizar nossos códigos dentro da pasta “src”, onde vamos criar uma pasta chamada “Components” e vamos adicionar nossos componentes posteriormente.
+Nossa estrutura de arquivos para o projeto React será bem simples, vamos centralizar nossos códigos dentro da pasta “src”, onde vamos criar uma pasta chamada “Pages” para nossas páginas e outra chamada “Components” para adicionar outros componentes posteriormente.
 
-![Alt text](./AssetsReact/image-6.png)
+![Alt text](./AssetsReact/image2-4.png)
 
-### Criando nosso primeiro componente
+### Criando nossa primeira página
 
-Como visto anteriormente, os componentes são forma de organizar projeto para facilitar a reutilização de código e atomização de manutenções, para isso utilizaremos o JSX.
+Para cada página dentro da nossa aplicação é recomendado que se crie uma pasta.
 
-Para organizar os componentes do nosso projeto com a fim de otimizar e organizar nosso desenvolvimento, criaremos uma pasta para cada componente. O propósito de nosso projeto é listar usuários, vamos começar criando um componente que exiba na tela os dados de um usuário.
+Nossa aplicação terá, a principio, uma única página, responsável por listar todos os nossos usuários, vamos chama-lá de “ListaDeUsuarios”, então devemos criar uma pasta dentro da pasta “Pages” chamada “ListaDeUsuarios” e dentro dessa pasta um arquivo chamado “ListaDeUsuarios.jsx”
 
-Para isso, crie dentro da pasta “Componentes”, uma pasta com o nome “CardUsuario”, card é um conceito que aplicamos no front-end para agrupar na tela os dados de uma determinada entidade.
-
-AAAAAAAAAAAAAAAAAAAAAAAAA
-![Alt text](./AssetsReact/image-7.png)
+![Alt text](./AssetsReact/image2-5.png)
 
 Caso sua pasta esteja com a visualização no formato linear, como na imagem a seguir, sugiro que vá às configurações de pasta e remova a opção “Compact Folders”. Caso não esteja, você deve ignorar a próxima instrução.
 
-AAAAAAAAAAAAAAAAAAAAAAA
-![Alt text](./AssetsReact/image-9.png)
+![Alt text](./AssetsReact/image2-6.png)
 
 Para acessar a opção “Compact Folder” você deve acessar os menus:
 
@@ -81,6 +77,33 @@ Arquivo (File) -> Preferências (Preferences) -> Configurações (Settings)
 Após abrir a janela de configurações, no campo de busca digite: “compact” e desmarque a primeira opção.
 
 ![Alt text](./AssetsReact/image-11.png)
+
+Voltando às páginas, vamos criar o código base de um componente JSX para nossa página, adicionar um título e posteriormente preenche-lá com nossos componentes.
+
+```JSX
+import React from 'react';
+
+function ListaDeUsuarios() {
+    return (
+        <div>
+          <h2>Lista de usuários</h2>
+        </div>
+    );
+}
+
+export default ListaDeUsuarios;
+
+```
+
+### Criando nosso primeiro componente
+
+Como visto anteriormente, os componentes são forma de organizar projeto para facilitar a reutilização de código e atomização de manutenções, para isso utilizaremos o JSX.
+
+Para organizar os componentes do nosso projeto com a fim de otimizar e organizar nosso desenvolvimento, criaremos uma pasta para cada componente. O propósito de nosso projeto é listar usuários, vamos começar criando um componente que exiba na tela os dados de um usuário.
+
+Para isso, crie dentro da pasta “Componentes”, uma pasta com o nome “CardUsuario”, card é um conceito que aplicamos no front-end para agrupar na tela os dados de uma determinada entidade.
+
+![Alt text](./AssetsReact/image2-2.png)
 
 Voltando ao nosso componente, precisamos criar dentro de nossa pasta “CardUsuario” o arquivo JSX que irá compor nosso componente, para isso clique com o lado direito do mouse na pasta e selecione a opção “Novo Arquivo”, o nome do arquivo deve ser “CardUsuario.jsx”.
 
@@ -115,9 +138,9 @@ export default CardUsuario;
 
 ```
 
-### Utilizando nosso componente
+### Referenciando a página
 
-No passo anterior criamos nosso componente, mas note que ainda não utilizamos este componente em nossa aplicação, para utilizar o componente precisamos alterar o arquivo raiz e “chamar” este componente.
+No passo anterior criamos a nossa primeira página e componente, mas note que ainda não os utilizamos em nossa aplicação, para utilizar a página precisamos alterar o arquivo raiz e “chamar” esta página.
 
 Vamos até o arquivo App.Js, localizado na raiz da pasta “src”
 
@@ -157,7 +180,7 @@ export default App;
 
 ```
 
-Dentro do nosso código há uma imagem, que representa o logo do React, seguido de uma tag *< p >*, com o texto exibido abaixo do logo.
+Dentro do nosso código há uma imagem, que representa o logo do React, seguido de uma tag ```<p>```, com o texto exibido abaixo do logo.
 
 Como nossa intenção é exibir os dados do usuário, vamos inicialmente remover todo esse conteúdo de dentro do nosso arquivo App.js.
 
@@ -180,12 +203,14 @@ export default App;
 
 Gosto de pensar que criar componentes React com JSX é como criar minhas próprias tags HTML, porém com muito mais ações, estilos e consequentemente muito mais possibilidades.
 
-Então podemos entender que nosso componente “CardUsuario” é uma nova tag e ao referenciá-la em nosso código, exibiremos o nome e a email da pessoa, mas antes, para utilizar a nossa tag personalizada, precisamos importá-la para dentro de nosso arquivo.
+Então podemos entender que nossa página “ListaDeUsuarios” é uma nova tag e ao referenciá-la em nosso código, exibiremos a nossa página de listagem de usuários, que por enquanto contém somente o título da página.
+
+Mas antes, para utilizar a nossa tag personalizada, precisamos importá-la para dentro de nosso arquivo.
 
 Adicione o código a seguir na primeira linha do arquivo App.js
 
-```
-import CardUsuario from "./Components/CardUsuario/CardUsuario"; 
+``` JS
+import ListaDeUsuarios from './Pages/ListaDeUsuarios/ListaDeUsuarios';
 ```
 
 Esse código representa a importação de nossa tag para utilizarmos dentro desse arquivo App.js, durante seus estudos em React você irá notar que importações e exportações são muito comuns para acessarmos e compartilharmos arquivos entre nosso projeto.
@@ -193,22 +218,39 @@ Esse código representa a importação de nossa tag para utilizarmos dentro dess
 Após importar o arquivo devemos adicionar nossa tag personalizada dentro de nossa div, ao fim do processo seu código deverá parecer com o código a seguir:
 
 ``` JSX
-import "./App.css";
-import CardUsuario from "./Components/CardUsuario/CardUsuario";
+import './App.css';
+import ListaDeUsuarios from './Pages/ListaDeUsuarios/ListaDeUsuarios';
 
 function App() {
   return (
-    <div>
-      <CardUsuario></CardUsuario>
-    </div>
+    <ListaDeUsuarios></ListaDeUsuarios>
   );
 }
 
 export default App;
-
 ```
 
-Ao salvar o arquivo, vá até o navegador onde sua aplicação React está aberta, lá você poderá notar que o nome e email escritos dentro do componente aparecerá em sua tela.
+Ao salvar o arquivo, vá até o navegador onde sua aplicação React está aberta, lá você poderá notar que o título escrito em nossa página aparecerá em sua tela.
+
+### Utilizando nosso componente
+
+Como dito anteriormente, podemos pensar que criar componentes React com JSX é como criar nossas próprias tags HTML, logo, para adicionar o componente que criamos anteriormente basta referencia-lo **e importa-lo** dentro de nossa página “ListaDeUsuarios.jsx”.
+
+```jsx
+import React from 'react';
+import CardUsuario from '../../Components/CardUsuario/CardUsuario';
+
+function ListaDeUsuarios() {
+    return (
+        <div>
+            <h2>Lista de usuários</h2>
+            <CardUsuario></CardUsuario>
+        </div>
+    );
+}
+
+export default ListaDeUsuarios;
+```
 
 ### Adicionando CSS em nosso componente
 
@@ -220,12 +262,11 @@ CSS Modules é uma abordagem no desenvolvimento de aplicações React que permit
 
 Utilizar CSS Modules em um componente React pode ser bem similar com utilizar CSS em um arquivo HTML, com a vantagem de que, assim como “atomizamos” os componentes HTML, também vamos deixar nossos arquivos CSS cada vez menores e com responsabilidades mais direcionadas.
 
-Para adicionar um arquivo CSS crie um arquivo na pasta do componente que deseja estilizar, o padrão de nome que vamos adotar é nomear o arquivo CSS com o mesmo nome do componente React, seguido da palavra **module** e por fim a extesão css, tudo isso separado por pontos, como no exemplo a seguir:
+Para adicionar um arquivo CSS crie um arquivo na pasta do componente que deseja estilizar, o padrão de nome que vamos adotar é nomear o arquivo CSS com o mesmo nome do componente React, seguido da palavra **module** e por fim a extensão css, tudo isso separado por pontos, como no exemplo a seguir:
 
 ``` CardUsuario.module.css ```
 
-AAAAAAAAAAAAAAAAAAAAAA
-![Alt text](./AssetsReact/image-16.png)
+![Alt text](./AssetsReact/image2-7.png)
 
 Agora vamos estilizar o componente, a sintaxe do CSS permanece a mesma que já conhecemos e trabalhamos anteriormente em PW I, aqui vai um CSS de exemplo para nosso CardUsuario.
 
@@ -245,7 +286,7 @@ Para importar basta adicionar na primeira linha do arquivo JSX o seguinte códig
 
 ``` import styles from "./CardUsuario.module.css" ```
 
-Com isso, criamos um objeto de importação chamado **styles** onde todas as classes CSS, criadas em nosso arquivo CSS Modules, podem ser refenciados.
+Com isso, criamos um objeto de importação chamado **styles** onde todas as classes CSS, criadas em nosso arquivo CSS Modules, podem ser referenciados.
 
 #### Utilizando CSS Modules
 
@@ -271,8 +312,7 @@ export default CardUsuario;
 
 Adicionando está classe em nosso arquivo JSX a aparência de nosso site deve ser similar a imagem a seguir:
 
-AAAAAAAAAAAAAAAAAAAA
-![Alt text](./AssetsReact/image-17.png)
+![Alt text](./AssetsReact/image2-8.png)
 
 Agora com o HTML e CSS em mãos, sua criatividade é ilimitada, teste estilos e componentes diferentes para criar visuais interessantes e chamativos.
 
@@ -286,10 +326,9 @@ A hierarquia de componentes permite que você divida sua interface do usuário e
 
 Hoje nossa hierarquia de componentes hoje está desenhada da seguinte forma:  
 
-AAAAAAAAAA
-![Alt text](./AssetsReact/image-12.png)
+![Alt text](./AssetsReact/image2-11.png)
 
-Ou seja, o componente App.JSX é pai do nosso componente CardUsuario.JSX.
+Ou seja, o componente App.JSX é pai da página ListaDeUsuarios.JSX, que por sua vez é pai do componente CardUsuario.JSX.
 
 ### O que são as Props
 
@@ -345,19 +384,17 @@ export default CardUsuario;
 
  Note que agora que nosso componente está dinâmico, sua aparência se assemelha à um formulário em branco, esperando para ser preenchido.
 
-AAAAAAAAA
- ![Alt text](./AssetsReact/image-18.png)
+![Alt text](./AssetsReact/image2-10.png)
 
  Ao falar sobre props, mencionamos que o componente pai é o responsável de passar os dados para o componente filho, ou seja, para adicionar dados em nosso componente, precisamos acessar o componente pai e fazer a alteração necessária.
 
- No momento, o componente pai de nosso componente CardUsuario é o componente App.JSX, como vimos na imagem a seguir:
+ No momento, o componente pai de nosso componente CardUsuario é a página ListaDeUsuarios.JSX, como vimos na imagem a seguir:
 
-AAAAAAAAAAA
-![Alt text](./AssetsReact/image-12.png)
+![Alt text](./AssetsReact/image2-11.png)
 
 ### Utilizando Props
 
-Precisamos então acessar o arquivo App.JSX e na linha onde chamamos o componente CardUsuario precisamos fazer a devida alteração.
+Precisamos então acessar a página ListaDeUsuarios.JSX e na linha onde chamamos o componente CardUsuario precisamos fazer a devida alteração.
 
 Adicionar propriedades em um componente filho é bem similar ao que utilizamos para passar alguns dados ou configurações para componentes HTML, por exemplo a propriedade Source (ou src) de uma tag IMG do HTML é escrita da seguinte forma:
 
@@ -368,47 +405,45 @@ Adicionar propriedades em um componente filho é bem similar ao que utilizamos p
 Para adicionar um dado nas propriedades de nosso componente não é muito diferente, basta adicionar o nome da propriedade e o valor desejado como na imagem a seguir:
 
 ``` JSX
-import "./App.css";
-import CardUsuario from "./Components/CardUsuario/CardUsuario";
+import CardUsuario from '../../Components/CardUsuario/CardUsuario';
 
-function App() {
-  return (
-    <div>
-      <CardUsuario nome="Lourival Cicero" email="lourival@gmail.com"></CardUsuario>
-    </div>
-  );
+function ListaDeUsuarios() {
+    return (
+        <div>
+            <h2>Lista de usuários</h2>
+            <CardUsuario nome="Lourival Cicero" email="lourival@gmail.com"></CardUsuario>
+        </div>
+    );
 }
 
-export default App;
+export default ListaDeUsuarios;
+
 
 ```
 
 Ao acessar novamente nosso site no navegador você deve notar que nosso card voltou a estar preenchido com os dados que adicionamos.
 
-AAAAAAAAAA
-![Alt text](./AssetsReact/image-17.png)
+![Alt text](./AssetsReact/image2-12.png)
 
 Mas existe agora uma grande diferença entre nosso antigo componente e o componente atual: Nosso componente é dinâmico, ou seja, podemos criar vários componentes iguais, mas com nomes e emails diferentes:  
 
 ``` JSX
-import "./App.css";
-import CardUsuario from "./Components/CardUsuario/CardUsuario";
+import CardUsuario from '../../Components/CardUsuario/CardUsuario';
 
-function App() {
-  return (
-    <div>
-      <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
-      <CardUsuario nome="João" email="João@email.com"></CardUsuario>
-      <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
-    </div>
-  );
+function ListaDeUsuarios() {
+    return (
+        <div>
+            <h2>Lista de usuários</h2>
+            <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
+            <CardUsuario nome="João" email="João@email.com"></CardUsuario>
+            <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
+        </div>
+    );
 }
 
-export default App;
-
-
+export default ListaDeUsuarios;
 ```
 
-![Alt text](image2-1.png)
+![Alt text](./AssetsReact/image2-13.png)
 
 Com isso, temos uma estrutura básica em nosso front-end para criar uma listagem de usuários dinâmicas com dados de usuários preenchidos com informações do banco de dados, mas para isso, precisamos criar nosso back-end e realizar a integração de nossas aplicações.

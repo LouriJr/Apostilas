@@ -4,7 +4,7 @@
 
 A integração com APIs externas é uma parte importante da maioria das aplicações modernas, pois permite que os componentes sejam alimentados com dados a partir de fontes externas. O React fornece várias maneiras de integrar-se com APIs externas, incluindo a utilização de bibliotecas como fetch ou axios. 
 
-// 
+AAAAAAAAAAAA
 
 Neste exemplo, o componente ExampleComponent integra-se a uma API externa usando o método fetch quando o componente é montado. Ele armazena os dados retornados da API no estado do componente e atualiza o componente com base nos dados. Além disso, ele também gerencia o estado de carregamento e erro para mostrar informações apropriadas ao usuário. 
 
@@ -160,4 +160,3 @@ Aqui está um exemplo simples de um objeto JSON que contém informações sobre 
 ```
 
 Durante nossa integração de aplicações utilizaremos o formato de arquivo JSON para transportar dados do back-end para o front-end e vice-versa.
-

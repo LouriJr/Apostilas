@@ -215,7 +215,7 @@ namespace ApiUsuarios.DTO
 
 ## Criando nossa Classe DAO
 
-Como vimos anteriormente, a responsábilidade de nosso arquivo DAO é acessar e manipular nossa base de dados, criando funções para ler, inserir, remover e alterar dados, além de pode realizar a validação e tratamento dos dados antes de executar a operação no banco de dados.
+Como vimos anteriormente, a responsabilidade de nosso arquivo DAO é acessar e manipular nossa base de dados, criando funções para ler, inserir, remover e alterar dados, além de pode realizar a validação e tratamento dos dados antes de executar a operação no banco de dados.
 
 Para criar o arquivo DAO, vamos realizar um processo similar à criação da DTO, vamos criar uma pasta chamada DAO e vamos adicionar dentro dela um arquivo chamado UsuarioDAO
 
@@ -273,7 +273,7 @@ Essa biblioteca fornece classes, métodos e funcionalidades pré-implementadas q
 
 Ao utilizar a biblioteca MySQL.Data, os desenvolvedores podem simplificar o processo de acesso a dados em um banco de dados MySQL, reduzindo a quantidade de código necessário e aproveitando as funcionalidades já implementadas pela biblioteca. Isso resulta em um desenvolvimento mais rápido e eficiente de aplicativos que interagem com bancos de dados MySQL.
 
-Para adicionar a biblioteca, vamos ulizar o NuGet, que é o gerenciador de pacotes do .NET, para isso, clique com o lado direito do mouse sobre o nosso projeto, depois em Gerenciar Pacotes do NuGet.
+Para adicionar a biblioteca, vamos utilizar o NuGet, que é o gerenciador de pacotes do .NET, para isso, clique com o lado direito do mouse sobre o nosso projeto, depois em Gerenciar Pacotes do NuGet.
 
 ![Alt text](./AssetsCsharp/image-21.png)
 
@@ -281,7 +281,7 @@ Depois, no canto superior direito da tela, clique em "Procurar"
 
 ![Alt text](./AssetsCsharp/image-22.png)
 
-Procure por MySQL.Data e instale a bilbioteca a seguir, a oficial da Oracle
+Procure por MySQL.Data e instale a biblioteca a seguir, a oficial da Oracle
 
 ![Alt text](./AssetsCsharp/image-23.png)
 
@@ -336,7 +336,7 @@ namespace ApiUsuarios.DAO
 
 ```
 
-Note que o código acima referencia a classe UsuarioDTO, ou seja, precisamos referenciar um código externo à nossa classe atual. Pra isso, vamo utilizar o mesmo processo de importação rápida que utilizamos no passado.
+Note que o código acima referencia a classe UsuarioDTO, ou seja, precisamos referenciar um código externo à nossa classe atual. Pra isso, vamos utilizar o mesmo processo de importação rápida que utilizamos no passado.
 
 Posicione o cursor logo após o código UsuarioDTO, pressione CLTR + . no teclado para abrir a janela de importação rápida e selecione a opção com o Using.
 
@@ -390,7 +390,7 @@ A classe MySqlCommand é uma classe da biblioteca do MySql, seu funcionamento é
 
 Depois de instanciar essa classe, vamos executar a sua função **ExecuteReader** e armazenar seu resultado em uma variável chamada dataReader.
 
-Essa variável dataReader será a reponsavel por ler os dados desse banco de dados e popular (preencher) nossa lista de usuários criada anteriormente.
+Essa variável dataReader será a responsável por ler os dados desse banco de dados e popular (preencher) nossa lista de usuários criada anteriormente.
 
 Vamos criar um laço de repetição a partir dessa variável onde <mark> **cada execução desse laço representa uma linha encontrada no banco de dados**  </mark>. Ou seja, se houver 1 linha na base de dados, o código executará 1 vez, caso haja 100, executará 100 e assim por diante.
 
@@ -429,7 +429,7 @@ Esse código cria um objeto UsuarioDTO, preenche seus dados com os dados encontr
 
 #### Nome das variáveis
 
-Note que no momento existem duas váriaveis com o nome bem similar, **usuario** e **usuarios**, mas existe uma diferença conceitual entre elas.
+Note que no momento existem duas variáveis com o nome bem similar, **usuario** e **usuarios**, mas existe uma diferença conceitual entre elas.
 
 A variável **usuario**, no singular, representa uma **UNIDADE** de dados de um usuário, ja a variável **usuarios**, no plural, representa uma **LISTA** com possivelmente vários itens.
 
@@ -517,7 +517,7 @@ Agora, vamos executar a função criada anteriormente, a **ListarUsuarios** do o
 var usuarios = dao.ListarUsuarios();
 ```
 
-Agora basta retornar dentro do corpo de nossa reposta HTTP o resultado dessa listagem de usuarios. Para isso, insira a variável **usuarios** dentro do Ok e automaticamente o .NET irá transformar essa lista em um JSON e reponder a requisição com o corpo preenchido.
+Agora basta retornar dentro do corpo de nossa reposta HTTP o resultado dessa listagem de usuarios. Para isso, insira a variável **usuarios** dentro do Ok e automaticamente o .NET irá transformar essa lista em um JSON e responder a requisição com o corpo preenchido.
 
 ```C#
 return Ok(usuarios);
@@ -595,10 +595,55 @@ Esse JSON é a representação de todos os dados presentes no banco de dados, a 
 
 ### Dica extra
 
-Existem algumas extenções que você pode instalar em seu navegador para formatar e estilizar a visualização de seu JSON, no meu caso utilizo no Chrome chamada Json Viewer, ela tem diversos temas e pode ser instalada no link a seguir:
+Existem algumas extensões que você pode instalar em seu navegador para formatar e estilizar a visualização de seu JSON, no meu caso utilizo no Chrome chamada Json Viewer, ela tem diversos temas e pode ser instalada no link a seguir:
 
 https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
 
 E essa é a aparência dela
 
 ![Alt text](./AssetsCsharp/image-34.png)
+
+## CORS e permissionamento
+
+Hoje, se realizarmos uma requisição HTTP do frontend para o backend, existirá um bloqueio de segurança chamado CORS, nessa esta etapa do tutorial vamos realizar a configuração necessária para realizar o desbloqueio das requisições.
+
+CORS (Cross-Origin Resource Sharing) é um mecanismo de segurança implementado em navegadores web que restringe as solicitações feitas por scripts de uma origem (domínio, protocolo e porta) para outra origem diferente.
+
+No contexto de uma API em C#, o CORS é utilizado para controlar quais domínios ou origens externas têm permissão para acessar recursos da API. Ou seja, precisamos controlar quais sites podem ou não acessar nossa API.
+
+Em nossa API, vamos configurar uma política de segurança que permita qualquer site e qualquer origem acessar nossos dados, mas lembre que isso é um caso de estudo e que em projetos seguros essa medida não é recomendada.
+
+A configuração do CORS em sua API vai depender da versão do dotnet que seu projeto utiliza, siga os passos a seguir indicados para sua versão:
+
+### .NET Core 3.1 ou inferior
+
+Se você está utilizando a versão 3.1 ou inferior do .NET, você deve procurar o arquivo ```Startup.cs``` na raiz do seu projeto, lá deve existir um método chamado ```ConfigureServices```, dentro desse método, mantenha tudo que há dentro dele, mas adicione no inicio do método o código a seguir
+
+```C#
+services.AddCors(options =>
+{
+	options.AddPolicy("CorsPolicy", builder =>
+	{
+		builder.AllowAnyOrigin()
+		.AllowAnyMethod()
+        .AllowAnyHeader();
+    });
+});
+
+```
+
+Esse código cria uma política de segurança que permite qualquer site e qualquer método a acessar sua API.
+
+### .NET 5.0 ou superior
+
+Se você está utilizando a versão 5.0 ou superior do .NET, você deve procurar o arquivo ```Program.cs``` na raiz do seu projeto, dentro desse arquivo adicione o código a seguir antes da linha ```app.Run();```
+
+```C#
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+```
+
+Esse código cria uma política de segurança que permite qualquer site e qualquer método a acessar sua API.

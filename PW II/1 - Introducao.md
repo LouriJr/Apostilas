@@ -20,7 +20,7 @@ Esta arquitetura é amplamente utilizada em aplicações web, onde o cliente é 
 
 A arquitetura cliente-servidor também é comum em aplicações de banco de dados, onde o cliente é a aplicação que acessa o banco de dados e o servidor é o próprio banco de dados.
 
-![Alt text](image.png)
+![Alt text](./Assets/image.png)
 
 ## Introdução ao Javascript
 
@@ -66,7 +66,7 @@ C# e JavaScript são duas linguagens de programação distintas, cada uma com su
 
 #### C#
 
-``` C#
+```Javascript
 public void MaiorDeIdade()
 {
     int idade = 18;
@@ -104,4 +104,4 @@ function MaiorDeIdade()
 
 * C# é compilada para uma máquina virtual, enquanto o JavaScript é interpretado diretamente pelo navegador. 
 
-* C# é uma linguagem síncrona, enquanto o JavaScript é uma linguagem assíncrona. Isso significa que o C# executa tarefas de forma seqüencial, enquanto o JavaScript executa tarefas de forma paralela. 
+* C# é uma linguagem síncrona, enquanto o JavaScript é uma linguagem assíncrona. Isso significa que o C# executa tarefas de forma sequencial, enquanto o JavaScript executa tarefas de forma paralela. 
