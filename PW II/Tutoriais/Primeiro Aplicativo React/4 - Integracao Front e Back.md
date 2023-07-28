@@ -24,14 +24,14 @@ Esse é o nosso código deste componente atualmente:
 
 ```JSX
 import React from "react";
-import UserCard from "../../Components/UserCard/UserCard";
+import CardUsuario from "../../Components/CardUsuario/CardUsuario";
 
 function ListaDeUsuarios() {
   return (
     <div>
-      <UserCard nome="Lourival Cicero" idade="24"></UserCard>
-      <UserCard nome="João" idade="32"></UserCard>
-      <UserCard nome="Maria" idade="30"></UserCard>
+      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
+      <CardUsuario nome="João" idade="32"></CardUsuario>
+      <CardUsuario nome="Maria" idade="30"></CardUsuario>
     </div>
   );
 }
@@ -43,7 +43,7 @@ Vamos adicionar agora uma função chamada BuscarUsuarios, para poder realizar a
 
 ```JSX
 import React from "react";
-import UserCard from "../../Components/UserCard/UserCard";
+import CardUsuario from "../../Components/CardUsuario/CardUsuario";
 
 function ListaDeUsuarios() {
 
@@ -53,9 +53,9 @@ function ListaDeUsuarios() {
 
   return (
     <div>
-      <UserCard nome="Lourival Cicero" idade="24"></UserCard>
-      <UserCard nome="João" idade="32"></UserCard>
-      <UserCard nome="Maria" idade="30"></UserCard>
+      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
+      <CardUsuario nome="João" idade="32"></CardUsuario>
+      <CardUsuario nome="Maria" idade="30"></CardUsuario>
     </div>
   );
 }
@@ -128,7 +128,7 @@ Nesse momento o código do componente deve ser o seguinte:
 
 ```JSX
 import { useState } from "react";
-import UserCard from "../../Components/UserCard/UserCard";
+import CardUsuario from "../../Components/CardUsuario/CardUsuario";
 import axios from "axios";
 
 function ListaDeUsuarios() {
@@ -147,9 +147,9 @@ function ListaDeUsuarios() {
 
   return (
     <div>
-      <UserCard nome="Lourival Cicero" idade="24"></UserCard>
-      <UserCard nome="João" idade="32"></UserCard>
-      <UserCard nome="Maria" idade="30"></UserCard>
+      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
+      <CardUsuario nome="João" idade="32"></CardUsuario>
+      <CardUsuario nome="Maria" idade="30"></CardUsuario>
     </div>
   );
 }
@@ -191,9 +191,9 @@ Vamos então remover toda a parte visual de nosso componente, deixando somente u
 
 ``` HTML
     <div>
-      <UserCard nome="Lourival Cicero" idade="24"></UserCard>
-      <UserCard nome="João" idade="32"></UserCard>
-      <UserCard nome="Maria" idade="30"></UserCard>
+      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
+      <CardUsuario nome="João" idade="32"></CardUsuario>
+      <CardUsuario nome="Maria" idade="30"></CardUsuario>
     </div>
 ```
 
@@ -216,7 +216,7 @@ Sua sintaxe será a seguinte:
 ```JSX
 {
     usuarios.map(usuario => (
-        <UserCard nome={usuario.nome} email={usuario.email}></UserCard>
+        <CardUsuario nome={usuario.nome} email={usuario.email}></CardUsuario>
      ))
 }
 ```
@@ -261,7 +261,7 @@ Assim, está pronta nossa integração entre front-end e back-end, ao fim desse 
 
 ```JSX
 import { useEffect, useState } from "react";
-import UserCard from "../../Components/UserCard/UserCard";
+import CardUsuario from "../../Components/CardUsuario/CardUsuario";
 import axios from "axios";
 
 function ListaDeUsuarios() {
@@ -287,7 +287,7 @@ function ListaDeUsuarios() {
   return (
     <div>
       {usuarios.map((usuario) => (
-        <UserCard nome={usuario.nome}></UserCard>
+        <CardUsuario nome={usuario.nome}></CardUsuario>
       ))}
     </div>
   );

@@ -617,18 +617,13 @@ A configuração do CORS em sua API vai depender da versão do dotnet que seu pr
 
 ### .NET Core 3.1 ou inferior
 
-Se você está utilizando a versão 3.1 ou inferior do .NET, você deve procurar o arquivo ```Startup.cs``` na raiz do seu projeto, lá deve existir um método chamado ```ConfigureServices```, dentro desse método, mantenha tudo que há dentro dele, mas adicione no inicio do método o código a seguir
+Se você está utilizando a versão 3.1 ou inferior do .NET, você deve procurar o arquivo ```Startup.cs``` na raiz do seu projeto, lá deve existir um método chamado ```Configure```, dentro desse método, mantenha tudo que há dentro dele, mas adicione no inicio do método o código a seguir
 
 ```C#
-services.AddCors(options =>
-{
-	options.AddPolicy("CorsPolicy", builder =>
-	{
-		builder.AllowAnyOrigin()
-		.AllowAnyMethod()
-        .AllowAnyHeader();
-    });
-});
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 ```
 
