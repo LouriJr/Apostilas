@@ -50,7 +50,7 @@ Embora o nome possa sugerir isso, o JavaScript e o Java são duas linguagens de 
 
 O JavaScript é uma linguagem de programação de script dinâmica, que é executada diretamente no navegador do usuário. Ele é usado para adicionar interatividade e dinamismo às páginas da web e é muito versátil, permitindo a criação de aplicações client-side, servidor-side (através do Node.js) e aplicativos móveis.
 
-Já o Java é uma linguagem de programação orientada a objetos de baixo nível, que é compilada e executada em uma máquina virtual. Ele é usado para criar aplicativos de desktop, aplicativos de servidor e aplicativos móveis de alta performance.
+Já o Java é uma linguagem de programação orientada a objetos, que é compilada e executada em uma máquina virtual. Ele é usado para criar aplicativos de desktop, aplicativos de servidor e aplicativos móveis de alta performance.
 
 ### Similaridades e Diferenças entre C# e Javascript
 
