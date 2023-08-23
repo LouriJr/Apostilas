@@ -79,6 +79,42 @@ export default CardUsuario;
 
 Ou seja, JSX é uma sintaxe que permite a criação de elementos da interface de usuário de forma mais fácil e intuitiva e torna o desenvolvimento mais eficiente e agradável. Além disso, é uma característica fundamental do React que permite passar valores dinâmicos como propriedades para os componentes.
 
+### Adicionando CSS em nosso componente
+
+Existem diversas maneiras de trabalhar com CSS em nosso componente React como Estilização inline, bibliotecas CSS e arquivos CSS. Nessa apostila a abordagem adotada será o CSS Modules.
+
+#### O que é CSS Modules
+
+CSS Modules é uma abordagem no desenvolvimento de aplicações React que permite o encapsulamento e modularização do CSS, evitando conflitos e promovendo uma melhor organização e reutilização dos estilos. Com o CSS Modules, cada componente tem seu próprio escopo de estilos, tornando mais fácil o desenvolvimento e manutenção de projetos, além de proporcionar uma maior legibilidade e escalabilidade no código CSS.
+
+Utilizar CSS Modules em um componente React pode ser bem similar com utilizar CSS em um arquivo HTML, com a vantagem de que, assim como “atomizamos” os componentes HTML, também vamos deixar nossos arquivos CSS cada vez menores e com responsabilidades mais direcionadas.
+
+Para adicionar um arquivo CSS crie um arquivo na pasta do componente que deseja estilizar, o padrão de nome que vamos adotar é nomear o arquivo CSS com o mesmo nome do componente React, seguido da palavra **module** e por fim a extensão css, tudo isso separado por pontos, como no exemplo a seguir:
+
+``` CardUsuario.module.css ```
+
+![Alt text](./Tutoriais/Primeiro%20Aplicativo%20React//AssetsReact/image2-7.png)
+
+Agora vamos estilizar o componente, a sintaxe do CSS permanece a mesma que já conhecemos e trabalhamos anteriormente em PW I, aqui vai um CSS de exemplo para nosso CardUsuario.
+
+``` CSS
+.card {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    width: 200px;
+    margin: 10px 10px;
+}
+```
+
+Criando o arquivo CSS, precisamos importar ele dentro de nosso componente JSX para declarar o seu uso, a importação desse arquivo é muito importante, pois sem ela esse CSS fica inacessível.
+
+Para importar basta adicionar na primeira linha do arquivo JSX o seguinte código:
+
+``` import styles from "./CardUsuario.module.css" ```
+
+Com isso, criamos um objeto de importação chamado **styles** onde todas as classes CSS, criadas em nosso arquivo CSS Modules, podem ser referenciados.
+
 ## Props: Como passar propriedades (props) para os componentes e utilizá-las para renderizar dados dinamicamente
 
 Props são mecanismos para passar informações e ações de um componente pai para um componente filho. São semelhantes aos atributos em elementos HTML. As props são utilizadas para transmitir dados ou configurações específicas de um componente para outro, permitindo que os componentes sejam personalizados e reutilizáveis.
