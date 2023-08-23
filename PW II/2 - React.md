@@ -115,6 +115,34 @@ Para importar basta adicionar na primeira linha do arquivo JSX o seguinte códig
 
 Com isso, criamos um objeto de importação chamado **styles** onde todas as classes CSS, criadas em nosso arquivo CSS Modules, podem ser referenciados.
 
+#### Utilizando CSS Modules
+
+Agora com nosso CSS importado, precisamos utilizá-lo em nosso componente, seu uso é muito similar ao uso no HTML convencional, com exceção da marcação “class” e do uso do objeto **styles**.
+
+Para utilizar uma classe no CSS como a classe “card” que criamos, você deve utilizar a marcação “className” da seguinte maneira:
+
+```JSX
+import styles from "./CardUsuario.module.css";
+
+function CardUsuario() {
+  return (
+    <div className={styles.card}>
+      <p>Nome: Lourival Cicero</p>
+      <p>Email: lourival@gmail.com</p>
+    </div>
+  );
+}
+
+export default CardUsuario;
+
+```
+
+Adicionando está classe em nosso arquivo JSX a aparência de nosso site deve ser similar a imagem a seguir:
+
+![Alt text](./Tutoriais/Primeiro%20Aplicativo%20React/AssetsReact/image2-8.png)
+
+Agora com o HTML e CSS em mãos, sua criatividade é ilimitada, teste estilos e componentes diferentes para criar visuais interessantes e chamativos.
+
 ## Props: Como passar propriedades (props) para os componentes e utilizá-las para renderizar dados dinamicamente
 
 Props são mecanismos para passar informações e ações de um componente pai para um componente filho. São semelhantes aos atributos em elementos HTML. As props são utilizadas para transmitir dados ou configurações específicas de um componente para outro, permitindo que os componentes sejam personalizados e reutilizáveis.
@@ -156,34 +184,6 @@ export default ComponentePai;
 ```
 
 Ou seja, por meio do componente pai podemos passar dados dinâmicos para o componente filho, assim nosso componentes podem ser reutilizados com informações diferentes a serem exibidas para os usuários.
-
-#### Utilizando CSS Modules
-
-Agora com nosso CSS importado, precisamos utilizá-lo em nosso componente, seu uso é muito similar ao uso no HTML convencional, com exceção da marcação “class” e do uso do objeto **styles**.
-
-Para utilizar uma classe no CSS como a classe “card” que criamos, você deve utilizar a marcação “className” da seguinte maneira:
-
-```JSX
-import styles from "./CardUsuario.module.css";
-
-function CardUsuario() {
-  return (
-    <div className={styles.card}>
-      <p>Nome: Lourival Cicero</p>
-      <p>Email: lourival@gmail.com</p>
-    </div>
-  );
-}
-
-export default CardUsuario;
-
-```
-
-Adicionando está classe em nosso arquivo JSX a aparência de nosso site deve ser similar a imagem a seguir:
-
-![Alt text](./Tutoriais/Primeiro%20Aplicativo%20React/AssetsReact/image2-8.png)
-
-Agora com o HTML e CSS em mãos, sua criatividade é ilimitada, teste estilos e componentes diferentes para criar visuais interessantes e chamativos.
 
 ## State e gerenciamento de estado
 
