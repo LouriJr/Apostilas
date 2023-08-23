@@ -121,6 +121,34 @@ export default ComponentePai;
 
 Ou seja, por meio do componente pai podemos passar dados dinâmicos para o componente filho, assim nosso componentes podem ser reutilizados com informações diferentes a serem exibidas para os usuários.
 
+#### Utilizando CSS Modules
+
+Agora com nosso CSS importado, precisamos utilizá-lo em nosso componente, seu uso é muito similar ao uso no HTML convencional, com exceção da marcação “class” e do uso do objeto **styles**.
+
+Para utilizar uma classe no CSS como a classe “card” que criamos, você deve utilizar a marcação “className” da seguinte maneira:
+
+```JSX
+import styles from "./CardUsuario.module.css";
+
+function CardUsuario() {
+  return (
+    <div className={styles.card}>
+      <p>Nome: Lourival Cicero</p>
+      <p>Email: lourival@gmail.com</p>
+    </div>
+  );
+}
+
+export default CardUsuario;
+
+```
+
+Adicionando está classe em nosso arquivo JSX a aparência de nosso site deve ser similar a imagem a seguir:
+
+![Alt text](./Tutoriais/Primeiro%20Aplicativo%20React/AssetsReact/image2-8.png)
+
+Agora com o HTML e CSS em mãos, sua criatividade é ilimitada, teste estilos e componentes diferentes para criar visuais interessantes e chamativos.
+
 ## State e gerenciamento de estado
 
 No React, o estado (state) é um conceito fundamental para lidar com dados dinâmicos em um componente. O estado representa as informações que podem ser modificadas e atualizadas ao longo do tempo durante a interação do usuário ou em resposta a eventos. O gerenciamento adequado do estado é crucial para criar componentes interativos e reativos.
