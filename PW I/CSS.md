@@ -81,6 +81,13 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     }
 ```
 6. **Borda (border):** Define as propriedades da borda do elemento, como largura, estilo e cor.
+``` CSS
+    /* index.css */
+    .container {
+        border: solid 5px;
+        color: #818181
+    }
+```
 7. **Largura e altura (width e height):** Define as dimensões do elemento.
 8. **Posição (position):** Controla como o elemento é posicionado em relação aos seus elementos pais.
 9. **Exibição (display):** Define como o elemento deve ser exibido, como bloco, linha ou em linha.
