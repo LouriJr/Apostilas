@@ -28,6 +28,13 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     }
 ```
 3. **Fonte (font):** Define a família de fonte, tamanho e outros atributos de texto.
+3.1. ***font-family*** 
+``` CSS
+    /* index.css */
+    .container{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+```
 4. **Margens (margin):** Controla o espaço ao redor do elemento.
 5. **Preenchimento (padding):** Controla o espaço interno de um elemento em relação à sua borda.
 6. **Borda (border):** Define as propriedades da borda do elemento, como largura, estilo e cor.
