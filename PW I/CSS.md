@@ -9,7 +9,7 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     </div>
 ```
 ``` CSS
-    //index.css
+    /* index.css */
     .container{
         color: red;
     }
