@@ -52,6 +52,23 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
 ```
 
 4. **Margens (margin):** Controla o espaço ao redor do elemento.
+``` HTML
+    //index.html
+    <div class="container">
+        <p class="text">Texto de exemplo 1</p>
+        <p class="text">Texto de exemplo 2</p>
+    </div>
+```
+``` CSS
+    /* index.css */
+    .text {
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin: 10px 10px 10px 10px;
+    }
+```
 5. **Preenchimento (padding):** Controla o espaço interno de um elemento em relação à sua borda.
 6. **Borda (border):** Define as propriedades da borda do elemento, como largura, estilo e cor.
 7. **Largura e altura (width e height):** Define as dimensões do elemento.
