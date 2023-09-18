@@ -70,6 +70,16 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     }
 ```
 5. **Preenchimento (padding):** Controla o espaço interno de um elemento em relação à sua borda.
+``` CSS
+    /* index.css */
+    .container {
+        padding: 10px 11px 12px 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+```
 6. **Borda (border):** Define as propriedades da borda do elemento, como largura, estilo e cor.
 7. **Largura e altura (width e height):** Define as dimensões do elemento.
 8. **Posição (position):** Controla como o elemento é posicionado em relação aos seus elementos pais.
