@@ -2,6 +2,16 @@
 Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamos estudar as principais propriedades do CSS, são elas:
 
 1. **Cor (color):** Define a cor do texto.
+``` HTML
+    <div class="container">
+        <p>Texto de exemplo</p>
+    </div>
+```
+``` CSS
+.container{
+    color: red;
+}
+```
 2. **Fundo (background):** Controla a cor de fundo de um elemento.
 3. **Fonte (font):** Define a família de fonte, tamanho e outros atributos de texto.
 4. **Margens (margin):** Controla o espaço ao redor do elemento.
