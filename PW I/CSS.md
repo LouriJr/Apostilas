@@ -14,7 +14,19 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
         color: red;
     }
 ```
-2. **Fundo (background):** Controla a cor de fundo de um elemento.
+2. **Fundo (background-color):** Controla a cor de fundo de um elemento.
+``` HTML
+    //index.html
+    <div class="container">
+        <p>Texto de exemplo</p>
+    </div>
+```
+``` CSS
+    /* index.css */
+    .container{
+        background-color: red;
+    }
+```
 3. **Fonte (font):** Define a família de fonte, tamanho e outros atributos de texto.
 4. **Margens (margin):** Controla o espaço ao redor do elemento.
 5. **Preenchimento (padding):** Controla o espaço interno de um elemento em relação à sua borda.
