@@ -3,14 +3,16 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
 
 1. **Cor (color):** Define a cor do texto.
 ``` HTML
+    //index.html
     <div class="container">
         <p>Texto de exemplo</p>
     </div>
 ```
 ``` CSS
-.container{
-    color: red;
-}
+    //index.css
+    .container{
+        color: red;
+    }
 ```
 2. **Fundo (background):** Controla a cor de fundo de um elemento.
 3. **Fonte (font):** Define a família de fonte, tamanho e outros atributos de texto.
