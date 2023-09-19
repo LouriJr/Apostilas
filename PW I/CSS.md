@@ -106,6 +106,15 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     }
 ```
 9. **Exibição (display):** Define como o elemento deve ser exibido, como bloco, linha ou em linha.
+```
+    /* index.css */
+    .container {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+```
 10. **Flutuação (float):** Controla como um elemento deve se comportar em relação aos outros elementos ao seu redor.
 11. **Opacidade (opacity):** Define a transparência do elemento.
 12. **Z-index:** Controla a ordem de empilhamento dos elementos em camadas sobrepostas.
