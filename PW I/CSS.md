@@ -99,6 +99,12 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
 
 ```
 8. **Posição (position):** Controla como o elemento é posicionado em relação aos seus elementos pais.
+```
+    /* index.css */
+    .container{
+        font-weight: 500;
+    }
+```
 9. **Exibição (display):** Define como o elemento deve ser exibido, como bloco, linha ou em linha.
 10. **Flutuação (float):** Controla como um elemento deve se comportar em relação aos outros elementos ao seu redor.
 11. **Opacidade (opacity):** Define a transparência do elemento.
