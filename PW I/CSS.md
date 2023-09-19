@@ -89,6 +89,15 @@ Durante a aula passada estudamos o CSS, sua configuração e seu uso, agora vamo
     }
 ```
 7. **Largura e altura (width e height):** Define as dimensões do elemento.
+``` CSS
+    /* index.css */
+    .container {
+        width: 300px;
+        height: 300px;
+        background-color: #818181
+    }
+
+```
 8. **Posição (position):** Controla como o elemento é posicionado em relação aos seus elementos pais.
 9. **Exibição (display):** Define como o elemento deve ser exibido, como bloco, linha ou em linha.
 10. **Flutuação (float):** Controla como um elemento deve se comportar em relação aos outros elementos ao seu redor.
