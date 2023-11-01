@@ -29,9 +29,9 @@ import CardUsuario from "../../Components/CardUsuario/CardUsuario";
 function ListaDeUsuarios() {
   return (
     <div>
-      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
-      <CardUsuario nome="João" idade="32"></CardUsuario>
-      <CardUsuario nome="Maria" idade="30"></CardUsuario>
+      <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
+      <CardUsuario nome="João" email="João@email.com"></CardUsuario>
+      <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
     </div>
   );
 }
@@ -53,9 +53,9 @@ function ListaDeUsuarios() {
 
   return (
     <div>
-      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
-      <CardUsuario nome="João" idade="32"></CardUsuario>
-      <CardUsuario nome="Maria" idade="30"></CardUsuario>
+      <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
+      <CardUsuario nome="João" email="João@email.com"></CardUsuario>
+      <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
     </div>
   );
 }
@@ -147,9 +147,9 @@ function ListaDeUsuarios() {
 
   return (
     <div>
-      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
-      <CardUsuario nome="João" idade="32"></CardUsuario>
-      <CardUsuario nome="Maria" idade="30"></CardUsuario>
+      <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
+      <CardUsuario nome="João" email="João@email.com"></CardUsuario>
+      <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
     </div>
   );
 }
@@ -191,9 +191,9 @@ Vamos então remover toda a parte visual de nosso componente, deixando somente u
 
 ``` HTML
     <div>
-      <CardUsuario nome="Lourival Cicero" idade="24"></CardUsuario>
-      <CardUsuario nome="João" idade="32"></CardUsuario>
-      <CardUsuario nome="Maria" idade="30"></CardUsuario>
+      <CardUsuario nome="Lourival Cicero" email="Lourival@email.com"></CardUsuario>
+      <CardUsuario nome="João" email="João@email.com"></CardUsuario>
+      <CardUsuario nome="Maria" email="Maria@email.com"></CardUsuario>
     </div>
 ```
 
