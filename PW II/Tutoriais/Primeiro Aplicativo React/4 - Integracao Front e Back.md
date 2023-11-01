@@ -287,7 +287,7 @@ function ListaDeUsuarios() {
   return (
     <div>
       {usuarios.map((usuario) => (
-        <CardUsuario nome={usuario.nome}></CardUsuario>
+        <CardUsuario nome={usuario.nome} email={usuario.email}></CardUsuario>
       ))}
     </div>
   );
