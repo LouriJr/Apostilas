@@ -50,6 +50,18 @@ No passo anterior, criamos o endpoint `Cadastrar`. Agora, vamos começar a imple
 
 Abra o arquivo `UsuariosController` e adicione o seguinte código:
 
+```C#
+[HttpPost]
+[Route("cadastrar")]
+public IActionResult Cadastrar(UsuarioDTO usuario)
+{
+    var dao = new UsuarioDAO();
+    dao.CadastrarUsuario(usuario);
+
+    return Ok("Usuário cadastrado com sucesso!");
+}
+```
+
 ### O que fizemos aqui?
 
 1. **Instanciando o `UsuarioDAO`**  
