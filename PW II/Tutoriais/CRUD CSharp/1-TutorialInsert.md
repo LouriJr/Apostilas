@@ -6,7 +6,9 @@ Agora, vamos dar o próximo passo e criar um endpoint de **cadastro de usuário*
 
 ## O que é o HTTP POST?
 
-Enquanto o **GET** busca dados existentes, o **POST** é utilizado quando queremos **enviar informações para o servidor** com o objetivo de **criar um novo registro**. Ou seja, é o verbo ideal quando precisamos cadastrar algo novo em nossa API.
+Enquanto o **GET** busca dados existentes, o **POST** é utilizado quando queremos **enviar informações para o servidor** com o objetivo de **criar um novo registro**. 
+
+Ou seja, é o verbo ideal quando precisamos cadastrar algo novo em nossa API.
 
 ``` C#
 [HttpPost]
@@ -196,7 +198,7 @@ public void CadastrarUsuario(UsuarioDTO usuario)
 
     ```C#
     var query = @"INSERT INTO Usuarios (Nome, Email, Telefone)
-    VALUES (@nome, @email, @telefone)";
+                  VALUES (@nome, @email, @telefone)";
     ```
 
     Essa é a instrução SQL que será enviada ao banco.  
