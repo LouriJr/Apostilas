@@ -44,7 +44,13 @@ Depois selecione a opção **Javascript**
 Ainda no terminal, vamos executar um comando para acessar a nova paste, criada para o projeto:
 
 ``` bash
-cd listagem-usuarios code .
+cd listagem-usuarios
+```
+
+Depois, execute o comando 
+
+``` bash
+code .
 ```
 
 > `code .` abre diretamente a pasta no **Visual Studio Code**.
@@ -76,7 +82,7 @@ No VS Code, na barra lateral:
 
 -   Clique com o botão direito em `src` → **Nova Pasta** → digite **components**.
 
-![alt text](./assets/image.png)    
+![alt text](./assets/image.png)
 
 ### b) Criar o componente `CardUsuario`
 
