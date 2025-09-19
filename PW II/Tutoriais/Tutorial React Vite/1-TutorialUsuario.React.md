@@ -53,6 +53,8 @@ Depois, execute o comando
 code .
 ```
 
+⚠️NÃO ESQUECE O PONTO FINAL NO COMANDO ⚠️
+
 > `code .` abre diretamente a pasta no **Visual Studio Code**.
 
 ## 4️⃣ Instalar as dependências
@@ -88,7 +90,6 @@ No VS Code, na barra lateral:
 
 Dentro da pasta **components**, primeiro, crie uma pasta com o nome `CardUsuario`, depois um arquivo chamado dentro dessa pasta **CardUsuario.jsx** com o conteúdo:
 
-
 ``` typescript
 function CardUsuario() {
   return (
@@ -111,7 +112,7 @@ Ao criar componentes no React, é **recomendado organizar cada componente em sua
 Edite **src/App.jsx** para usar o novo componente:
 
 ``` typescript
-import CardUsuario from "./components/CardUsuario";
+import CardUsuario from "./components/CardUsuario/CardUsuario";
 
 export default function App() {
   return (
