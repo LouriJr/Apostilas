@@ -86,7 +86,7 @@ No VS Code, na barra lateral:
 
 ### b) Criar o componente `CardUsuario`
 
-Dentro da pasta **components**, crie o arquivo **CardUsuario.jsx** com o conteúdo:
+Dentro da pasta **components**, primeiro, crie uma pasta com o nome `CardUsuario`, depois um arquivo chamado dentro dessa pasta **CardUsuario.jsx** com o conteúdo:
 
 
 ``` typescript
@@ -102,8 +102,9 @@ function CardUsuario() {
 export default CardUsuario;
 ```
 
-![alt text](./assets/image-1.png)
+![alt text](./assets/image-12.png)
 
+Ao criar componentes no React, é **recomendado organizar cada componente em sua própria pasta**. Essa prática é importante porque, conforme o projeto evolui, um único componente pode se desdobrar em diversos arquivos relacionados, como o JSX, CSS e eventualmente outros aquivos.
 
 ## 7️⃣ Usar o componente no App
 
