@@ -297,6 +297,4 @@ export default ListaDeUsuarios;
 
 ```
 
-E o resultado em tela deve ser o seguinte:
-
 <h4 style="color:red">Em caso de erro, verifique se sua API está executando no Visual Studio.</h3>
