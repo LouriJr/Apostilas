@@ -44,8 +44,16 @@ Depois selecione a opção **Javascript**
 Ainda no terminal, vamos executar um comando para acessar a nova paste, criada para o projeto:
 
 ``` bash
-cd listagem-usuarios code .
+cd listagem-usuarios
 ```
+
+Depois, execute o comando 
+
+``` bash
+code .
+```
+
+⚠️NÃO ESQUECE O PONTO FINAL NO COMANDO ⚠️
 
 > `code .` abre diretamente a pasta no **Visual Studio Code**.
 
@@ -76,12 +84,11 @@ No VS Code, na barra lateral:
 
 -   Clique com o botão direito em `src` → **Nova Pasta** → digite **components**.
 
-![alt text](./assets/image.png)    
+![alt text](./assets/image.png)
 
 ### b) Criar o componente `CardUsuario`
 
-Dentro da pasta **components**, crie o arquivo **CardUsuario.jsx** com o conteúdo:
-
+Dentro da pasta **components**, primeiro, crie uma pasta com o nome `CardUsuario`, depois um arquivo chamado dentro dessa pasta **CardUsuario.jsx** com o conteúdo:
 
 ``` typescript
 function CardUsuario() {
@@ -96,15 +103,16 @@ function CardUsuario() {
 export default CardUsuario;
 ```
 
-![alt text](./assets/image-1.png)
+![alt text](./assets/image-12.png)
 
+Ao criar componentes no React, é **recomendado organizar cada componente em sua própria pasta**. Essa prática é importante porque, conforme o projeto evolui, um único componente pode se desdobrar em diversos arquivos relacionados, como o JSX, CSS e eventualmente outros aquivos.
 
 ## 7️⃣ Usar o componente no App
 
 Edite **src/App.jsx** para usar o novo componente:
 
 ``` typescript
-import CardUsuario from "./components/CardUsuario";
+import CardUsuario from "./components/CardUsuario/CardUsuario";
 
 export default function App() {
   return (

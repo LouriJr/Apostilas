@@ -25,7 +25,7 @@ Depois devemos criar uma pasta dentro da pasta “Pages” chamada “ListaDeUsu
 Vamos então criar o código base de um componente JSX para nossa página, adicionar um título e posteriormente preenche-lá com nossos componentes.
 
 ```JSX
-import CardUsuario from '../../components/CardUsuario';
+import CardUsuario from '../../components/CardUsuario/CardUsuario';
 
 function ListaDeUsuarios() {
     return (
@@ -158,7 +158,7 @@ Adicionar propriedades em um componente filho é bem similar ao que utilizamos p
 Para adicionar um dado nas propriedades de nosso componente não é muito diferente, basta adicionar o nome da propriedade e o valor desejado como na imagem a seguir:
 
 ```JSX
-import CardUsuario from '../../components/CardUsuario';
+import CardUsuario from '../../components/CardUsuario/CardUsuario';
 
 function ListaDeUsuarios() {
     return (
@@ -181,7 +181,7 @@ Ao acessar novamente nosso site no navegador você deve notar que nosso card vol
 Mas existe agora uma grande diferença entre nosso antigo componente e o componente atual: Nosso componente é dinâmico, ou seja, podemos criar vários componentes iguais, mas com nomes e emails diferentes:
 
 ```JSX
-import CardUsuario from '../../components/CardUsuario';
+import CardUsuario from '../../components/CardUsuario/CardUsuario';
 
 function ListaDeUsuarios() {
     return (
