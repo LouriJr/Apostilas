@@ -33,6 +33,15 @@ git clone https://github.com/seu-usuario/meu-primeiro-repo.git
 
 Ao executar, isso criará uma cópia do repositório remoto na sua máquina.
 
+Quando executar esse comando, você deve navegar até a pasta do seu repositório local no seu terminal, pois o git no terminal ~~e em qualquer lugar~~ só funciona se estiver na pasta correta
+
+Para isso, digite "cd nome-do-seu-repositorio" no terminal e dê enter
+
+``` bash
+cd nome-do-seu-repositorio
+```
+
+
 ### **5 – Configure o Git (apenas na primeira vez)**
 
 É necessário informar ao Git quem é você.  
